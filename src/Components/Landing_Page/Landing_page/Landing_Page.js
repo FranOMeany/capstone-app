@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing_Page.css";
-
-//import Navbar from './src/Components/Navbar/Navbar';
+import Navbar from "../../../Components/Navbar/Navbar";
 
 /*
 Refer to the statement below to create route for this path.

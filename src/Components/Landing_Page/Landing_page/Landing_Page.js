@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing_Page.css";
-import Layout from './components/Landing_Page/Landing_page';
+
+import Navbar from './././Components/Navbar/Navbar';
 
 /*
 Refer to the statement below to create route for this path.
@@ -10,7 +11,14 @@ Refer to the statement below to create route for this path.
 
 const Landing_Page = () => {
   return (
+
     <section className="hero-section">
+
+<div>
+        <Navbar />
+    </div>
+
+
       <div>
         <div data-aos="fade-up" className="flex-hero">
             

@@ -7,7 +7,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-              <Landing_Page/>
+            <Navbar />
                   <Routes>
                   </Routes>
             </BrowserRouter>

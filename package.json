@@ -24,12 +24,12 @@
       "react-app/jest"
     ]
   },
-
-    "compilerOptions": {
-       "baseUrl": "src"
-    },
-   "include": ["src"],
-
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": [
+    "src"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",

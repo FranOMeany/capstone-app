@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing_Page.css";
-import Layout from './components/Landing_Page/Landing_page'};
+import Layout from './components/Landing_Page/Landing_page';
 
 /*
 Refer to the statement below to create route for this path.

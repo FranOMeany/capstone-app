@@ -10,6 +10,7 @@ function App() {
             <BrowserRouter>
             <Landing_Page />
                   <Routes>
+                    <Route path="/instant-consultation" element={<InstantConsultation />} />
                   </Routes>
             </BrowserRouter>
         </div>

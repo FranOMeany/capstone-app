@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -13,6 +13,8 @@ const Navbar = () => {
     const[email,setEmail]=useState("");
     const [showDropdown, setShowDropdown] = useState(false);
     const handleClick = () => setClick(!click);
+
+    const navigate = useNavigate();
 
     
     const handleLogout = () => {
@@ -33,7 +35,8 @@ const Navbar = () => {
           }
         }
         setEmail('');
-        window.location.reload();
+        //window.location.reload();
+        navigate("/");
     }
     const handleDropdown = () => {
       setShowDropdown(!showDropdown);
@@ -47,6 +50,7 @@ const Navbar = () => {
           }
         }, []);
   return (
+    <header>
     <nav>
       <div className="nav__logo">
         <Link to="/">
@@ -86,7 +90,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="link">
-              <Link to="/login">
+              <Link to="login">
                 <button className="btn1">Login</button>
               </Link>
             </li>
@@ -94,6 +98,7 @@ const Navbar = () => {
         )}
       </ul>
     </nav>
+    </header>
   );
 };
 

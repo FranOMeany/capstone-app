@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Landing_Page from './Components/Landing_Page/Landing_page/Landing_Page';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 
+import ReviewForm from "./Components/ReviewForm/ReviewForm";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign_Up/Sign_Up";
 
@@ -11,11 +12,13 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-            <Landing_Page />
+            <Navbar />
                   <Routes>
                     <Route path="/" element={<Landing_Page/>}/>
                     <Route path="/Login" element={<Login/>}/>
                     <Route path="/SignUp" element={<SignUp/>}/>
+
+                    <Route path="/ReviewForm" element={<ReviewForm/>}/>
 
 
                     <Route path="/instant-consultation" element={<InstantConsultation />} />

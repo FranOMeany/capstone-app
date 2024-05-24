@@ -12,10 +12,17 @@ const Navbar = () => {
     const [username, setUsername] = useState("");
     const[email,setEmail]=useState("");
     const [showDropdown, setShowDropdown] = useState(false);
-    const handleClick = () => setClick(!click);
+    
 
     const navigate = useNavigate();
 
+    const getUserName = () => {
+        const emailParts = username.split("@");
+        const name = emailParts[0];
+        return name;
+    };
+
+    const handleClick = () => setClick(!click);
     
     const handleLogout = () => {
         sessionStorage.removeItem("auth-token");
@@ -24,6 +31,7 @@ const Navbar = () => {
         sessionStorage.removeItem("phone");
         // remove email phone
         localStorage.removeItem("doctorData");
+        localStorage.removeItem("appointmentData");
         setIsLoggedIn(false);
         // setUsername("");
        
@@ -45,10 +53,15 @@ const Navbar = () => {
       const storedemail = sessionStorage.getItem("email");
 
       if (storedemail) {
-            setIsLoggedIn(true);
-            setUsername(storedemail);
-          }
-        }, []);
+        setIsLoggedIn(true);
+        setUsername(storedemail);
+        }
+
+
+        //setIsLoggedIn(true);
+        //setUsername("Francisco J. O'Meany");
+
+      }, []);
   return (
     <header>
     <nav>
@@ -65,7 +78,8 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="link">
-          <Link to="/search/doctors">Appointments</Link>
+          {/* <Link to="/search/doctors">Appointments</Link> */}
+          <Link to="BookingConsultation">Appointments</Link>
         </li>
         <li className="link">
           <Link to="/healthblog">Health Blog</Link>
@@ -75,6 +89,17 @@ const Navbar = () => {
         </li>
         {isLoggedIn?(
           <>
+            <li className="link welcome-user">
+                {`Welcome, ${getUserName()}`}
+                <ul className='dropdown-menu'>
+                  <li>
+                    <Link to='ProfileCard'>Your Profile</Link>
+                  </li>
+                  <li>
+                    <Link to='ReportsLayout'>Your Reports</Link>
+                  </li>
+                </ul>
+            </li>
             <li className="link">
               <button className="btn2" onClick={handleLogout}>
                 Logout

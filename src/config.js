@@ -1,4 +1,4 @@
-export const API_URL = window.location.hostname === "localhost" ? "<add your theia server side url>" : "https://api.npoint.io/9a5543d36f1460da2f63";
+export const API_URL = window.location.hostname === "localhost" ? "https://francisco123-8181.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/" : "https://francisco123-8181.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/";
 console.log(
     "API_URL :",
     API_URL

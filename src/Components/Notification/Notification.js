@@ -25,6 +25,11 @@ const Notification = ({ children }) => {
     if (storedAppointmentData) {
       setAppointmentData(storedAppointmentData);
     }
+
+    //setIsLoggedIn(true);
+    //setUsername("Francisco J. O'Meany");
+    console.log("Notification set");
+
   }, []);
   return (
     <div>

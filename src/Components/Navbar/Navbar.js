@@ -110,6 +110,11 @@ const Navbar = () => {
         ) : (
           <>
             <li className="link">
+              <Link to="/InstantConsultation">
+                <button className="btn1">Consultation</button>
+              </Link>
+            </li>
+            <li className="link">
               <Link to="/signup">
                 <button className="btn1">Sign Up</button>
               </Link>

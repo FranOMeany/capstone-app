@@ -32,6 +32,8 @@ export default function Signup() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://francisco123-3000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+        "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify({
         name: userName,

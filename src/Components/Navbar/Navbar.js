@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import Notification from "../Notification/Notification";
 import "./Navbar.css";
 
 
@@ -101,19 +101,19 @@ const Navbar = () => {
                 </ul>
             </li>
             <li className="link">
+              <Link to="InstantConsultation">
+                <button className="btn2">Consultation</button>
+              </Link>
+            </li>
+            <li className="link">
               <button className="btn2" onClick={handleLogout}>
                 Logout
               </button>
             </li>
-            
           </>
         ) : (
           <>
-            <li className="link">
-              <Link to="/InstantConsultation">
-                <button className="btn1">Consultation</button>
-              </Link>
-            </li>
+            
             <li className="link">
               <Link to="/signup">
                 <button className="btn1">Sign Up</button>

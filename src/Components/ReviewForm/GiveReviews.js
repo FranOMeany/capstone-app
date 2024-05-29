@@ -53,7 +53,7 @@ function GiveReviews() {
 
   return (
     <div>
-      <Button variant="primary" /*disabled size='sm'*/ onClick={handleButtonClick}>Click Here</Button>
+      <Button variant="primary" /*disabled*/ onClick={handleButtonClick}>Click Here now</Button>
 
       <Popup
         style={{ backgroundColor: "#FFFFFF" }}

@@ -17,7 +17,7 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Navbar />
-                <Notification>
+                <Notification />
                   <Routes>
                     <Route path="/" element={<Landing_Page/>}/>
                     <Route path="/Login" element={<Login/>}/>
@@ -29,7 +29,7 @@ function App() {
                     <Route path="/ReportsLayout" element={<ReportsLayout/>}/>
                     <Route path="/instant-consultation" element={<InstantConsultation />} />
                   </Routes>
-                </Notification>
+                {/*</Notification>*/}
             </BrowserRouter>
         </div>
       );

@@ -30,6 +30,7 @@ const AppointmentForm = ({ onSubmit }) => {
     setPhoneNumber("");
     setDate("");
     setSelectedSlot(null);
+
   };
 
   return (
@@ -80,7 +81,7 @@ const AppointmentForm = ({ onSubmit }) => {
         >
           <option disabled>Select a time slot</option>
           <option value="9.00 AM">9.00 AM</option>
-          <option value="20.00 PM">20.00 PM</option>
+          <option value="5.00 PM">5.00 PM</option>
         </select>
       </div>
       <button type="submit">Book Now</button>

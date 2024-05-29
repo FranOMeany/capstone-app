@@ -12,3 +12,7 @@
     margin: 25px;
     border-radius: 10px;
 }
+
+.warning {
+    color: red;
+}

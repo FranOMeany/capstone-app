@@ -4,14 +4,19 @@ import React, { useState } from 'react';
 import Star from './Star'; // Import star component
 import './GiveReviews.css';
 
-function GiveReviews() {
-  const [showForm, setShowForm] = useState(false);
-  const [showWarning, setShowWarning] = useState(false);
-  const [formData, setFormData] = useState({ name: '', review: '', rating: 0 });
+function GiveReviews({serial, onSetReviews}) {
+  const [showForm, setShowForm] = useState(false);                                // State to track if the form should be displayed
+  const [submittedMessage, setSubmittedMessage] = useState('');                   // State to store the submitted message
+  const [showWarning, setShowWarning] = useState(false);                          // State to show a warning message
+  const [formData, setFormData] = useState({                                      // State to store form data
+    serial: serial,
+    name: '',     // Name input field
+    review: '',   // Review input field
+    rating: 0     // Rating input field
+  });
 
   const handleButtonClick = () => {
     setShowForm(true);
-    console.log("ShowForm true");
   };
 
   const handleChange = (e) => {
@@ -22,15 +27,19 @@ function GiveReviews() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setFormData({ name: '', review: '', rating: 0 });
+    //console.log("Formdata: ", formData );
 
+    setSubmittedMessage(formData);                          // Set submitted message to the form data
+    onSetReviews(formData);
+    
+    // Check if all fields are filled before submitting
     if (formData.name && formData.review && formData.rating > 0) {
-      setShowWarning(false);
+      setShowWarning(false);                                // Hide warning message if all fields are filled
+      setFormData({ serial: 0, name: '', review: '', rating: 0 });     // Reset form data
+      setShowForm(false);
     } else {
-      setShowWarning(true);
+      setShowWarning(true);     // Show warning message if any field is empty
     }
-
-    setShowForm(false)
   };
 
   const handleStarClick = (starIndex) => {
@@ -53,7 +62,7 @@ function GiveReviews() {
 
   return (
     <div>
-      <Button variant="primary" /*disabled*/ onClick={handleButtonClick}>Click Here now</Button>
+      <Button variant="primary" /*disabled*/ onClick={handleButtonClick}>Click Here</Button>
 
       <Popup
         style={{ backgroundColor: "#FFFFFF" }}

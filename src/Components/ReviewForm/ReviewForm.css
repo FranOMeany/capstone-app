@@ -1,3 +1,37 @@
 thead {
     background-color: lightgrey;
 }
+
+table {
+    border-spacing: inherit;
+
+    width: 94%;
+    /* max-width: 600px; */
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 20px;
+    border-right: 1px solid #3333;
+    border-bottom: 1px solid #3333;
+    -webkit-border-radius: 0px 0px 30px 30px !important;
+    -moz-border-radius: 0px 0px 30px 30px !important;
+    border-radius: 0px 0px 30px 30px !important;
+    box-shadow: 10px 6px 10px rgba(3, 3, 3, 0.25);
+    -webkit-box-shadow: 10px 6px 10px rgba(3, 3, 3, 0.25);
+    -moz-box-shadow: 10px 6px 10px rgba(3, 3, 3, 0.25);
+}
+
+table th {
+    padding: 10px 25px 10px 10px;
+}
+
+table button {
+    padding: 8px !important;
+}
+
+.btn-disabled {
+    opacity: 0.4 !important;
+    cursor: no-drop !important;
+}

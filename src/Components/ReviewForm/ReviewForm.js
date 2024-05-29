@@ -9,8 +9,10 @@ export default function ReviewForm() {
 
   const handleReview = function (review) {
     setReviews(review);
-  }
-  console.log(reviews)
+    //console.log("Reviews:", review);
+  };
+
+  //console.log("Initial Reviews:",  ( reviews == "" ? "undefined" : reviews ) );
 
   return (
     <div style={{margin: "auto", maxWidth: "800px", marginTop: "10%"}}>
@@ -31,28 +33,48 @@ export default function ReviewForm() {
             <td>Dr. Joseph Smith</td>
             <td>Cardiology</td>
             <td>
-              {<GiveReviews />}
+              { 
+                reviews == '' || ( reviews != '' && reviews.serial != 1 ) ? (<GiveReviews serial={1} onSetReviews={handleReview} />) : 
+                ( <Button className='btn-disabled' variant="primary" disabled size ='sm'>Submitted</Button> )
+              }
             </td>
-            <td></td>
+            <td>
+              {
+                reviews && reviews.serial == 1 ? ( reviews.review ) : ( '' )
+              }
+            </td>
           </tr>
           <tr>
             <td>2</td>
             <td>Dr. Kathy Mayers</td>
             <td>Dentist</td>
             <td>
-              {<GiveReviews />}
+              { 
+                reviews == '' || ( reviews != '' && reviews.serial != 2 ) ? (<GiveReviews serial={2} onSetReviews={handleReview} />) : 
+                ( <Button className='btn-disabled' variant="primary" disabled size ='sm'>Submitted</Button> )
+              }
             </td>
-            <td></td>
+            <td>
+              {
+                reviews && reviews.serial == 2 ? ( reviews.review ) : ( '' )
+              }
+            </td>
           </tr>
           <tr>
             <td>3</td>
             <td>Dr. Roger Moore</td>
             <td>Dermatology</td>
             <td>
-              {/* {<GiveReviews onHandleReview={handleReview} />} */}
-              <Button variant="primary" disabled size ='sm'>Review Submitted</Button>
-              </td>
-            <td>Excellent Doctor</td>
+              { 
+                reviews == '' || ( reviews != '' && reviews.serial != 3 ) ? (<GiveReviews serial={3} onSetReviews={handleReview} />) : 
+                ( <Button className='btn-disabled' variant="primary" disabled size ='sm'>Submitted</Button> )
+              }
+            </td>
+            <td>
+              {
+                reviews && reviews.serial == 3 ? ( reviews.review ) : ( '' )
+              }
+            </td>
           </tr>
         </tbody>
       </Table>

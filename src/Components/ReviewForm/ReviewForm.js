@@ -34,13 +34,13 @@ export default function ReviewForm() {
             <td>Cardiology</td>
             <td>
               { 
-                reviews == '' || ( reviews != '' && reviews.serial != 1 ) ? (<GiveReviews serial={1} onSetReviews={handleReview} />) : 
+                reviews === '' || ( reviews !== '' && reviews.serial !== 1 ) ? (<GiveReviews serial={1} onSetReviews={handleReview} />) : 
                 ( <Button className='btn-disabled' variant="primary" disabled size ='sm'>Submitted</Button> )
               }
             </td>
             <td>
               {
-                reviews && reviews.serial == 1 ? ( reviews.review ) : ( '' )
+                reviews && reviews.serial === 1 ? ( reviews.review ) : ( '' )
               }
             </td>
           </tr>
@@ -50,13 +50,13 @@ export default function ReviewForm() {
             <td>Dentist</td>
             <td>
               { 
-                reviews == '' || ( reviews != '' && reviews.serial != 2 ) ? (<GiveReviews serial={2} onSetReviews={handleReview} />) : 
+                reviews === '' || ( reviews !== '' && reviews.serial !== 2 ) ? (<GiveReviews serial={2} onSetReviews={handleReview} />) : 
                 ( <Button className='btn-disabled' variant="primary" disabled size ='sm'>Submitted</Button> )
               }
             </td>
             <td>
               {
-                reviews && reviews.serial == 2 ? ( reviews.review ) : ( '' )
+                reviews && reviews.serial === 2 ? ( reviews.review ) : ( '' )
               }
             </td>
           </tr>
@@ -66,13 +66,13 @@ export default function ReviewForm() {
             <td>Dermatology</td>
             <td>
               { 
-                reviews == '' || ( reviews != '' && reviews.serial != 3 ) ? (<GiveReviews serial={3} onSetReviews={handleReview} />) : 
+                reviews === '' || ( reviews !== '' && reviews.serial !== 3 ) ? (<GiveReviews serial={3} onSetReviews={handleReview} />) : 
                 ( <Button className='btn-disabled' variant="primary" disabled size ='sm'>Submitted</Button> )
               }
             </td>
             <td>
               {
-                reviews && reviews.serial == 3 ? ( reviews.review ) : ( '' )
+                reviews && reviews.serial === 3 ? ( reviews.review ) : ( '' )
               }
             </td>
           </tr>

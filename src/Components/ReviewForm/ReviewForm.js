@@ -76,6 +76,7 @@ export default function ReviewForm() {
               }
             </td>
           </tr>
+          <tr style={{height: '25px'}}><td></td></tr>
         </tbody>
       </Table>
     </div>

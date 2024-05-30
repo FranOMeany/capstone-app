@@ -63,6 +63,7 @@ export default function ReportsLayout() {
                 <Button variant="primary" size='sm' onClick={downloadReport}>Download Report</Button>
             </td>
           </tr>
+          <tr style={{height: '25px'}}><td></td></tr>
         </tbody>
       </Table>
     </div>

@@ -107,15 +107,6 @@ const ProfileCard = () => {
       {editMode ? (
         <form onSubmit={handleSubmit}>
           <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={userDetails.email}
-              disabled // Disable the email field
-            />
-          </label>
-          <label>
             Name
             <input
               type="text"
@@ -131,6 +122,15 @@ const ProfileCard = () => {
               name="phone"
               value={updatedDetails.phone}
               onChange={handleInputChange}
+            />
+          </label>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              value={userDetails.email}
+              disabled // Disable the email field
             />
           </label>
           <button type="submit">Save</button>
